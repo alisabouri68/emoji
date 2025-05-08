@@ -69,8 +69,21 @@ export default function AccordionSection() {
         </section>
     );
 }
+interface AccordionItemData {
+    id: string;
+    title: string;
+    typo1: string;
+    typo2: string[];
+    video: string;
+    color: string;
+}
 
-function AccordionItem({ item, index }: any) {
+interface AccordionItemProps {
+    item: AccordionItemData;
+    index: number;
+}
+
+const AccordionItem: React.FC<AccordionItemProps> = ({ item, index }) => {
     const ref = useRef<HTMLDivElement>(null);
     const isInView = useInView(ref, { margin: '-30% 0px -30% 0px', once: false });
 
