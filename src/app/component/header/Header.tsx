@@ -9,11 +9,11 @@ export default function Header() {
     const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
     // تابع throttle با نوع‌دهی پیشرفته
-    const throttle = useCallback(<T extends (...args: any[]) => void>(
+    const throttle = useCallback(<T extends (...args: unknown[]) => void>(
         func: T,
         limit: number
     ) => {
-        let lastFunc: NodeJS.Timeout;
+        let lastFunc: ReturnType<typeof setTimeout>;
         let lastRan: number;
         return (...args: Parameters<T>) => {
             if (!lastRan) {

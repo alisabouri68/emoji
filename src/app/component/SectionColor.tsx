@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, useState, useCallback, useEffect } from 'react';
-import { motion, useInView } from 'framer-motion';
+import {useInView } from 'framer-motion';
 const LogoCarousel = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
