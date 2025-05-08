@@ -109,8 +109,7 @@ export default function Header() {
                         <BsEmojiSmileFill className='text-lg sm:text-xl animate-pulse' />
                     </div>
                     <div className='absolute top-0 left-2 sm:left-5 rounded-full w-max bg-amber-50 text-xs sm:text-sm px-3 sm:px-4 py-1 sm:py-2 shadow-sm transition-all duration-300 group-hover:scale-105'>
-                        Let's work
-                    </div>
+                    Lets's Work                    </div>
                 </div>
 
                 {/* بخش مرکزی */}
