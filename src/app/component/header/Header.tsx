@@ -108,8 +108,7 @@ export default function Header() {
                     <div className='hidden sm:block absolute top-0 left-2 sm:left-5 bg-orange-50 rounded-full p-1 sm:p-2 transition-transform duration-700 ease-in-out group-hover:z-auto group-hover:translate-x-16 sm:group-hover:translate-x-32 group-hover:rotate-[360deg]'>
                         <BsEmojiSmileFill className='text-lg sm:text-xl animate-pulse' />
                     </div>
-                    <div className='absolute top-0 left-2 sm:left-5 rounded-full w-max bg-amber-50 text-xs sm:text-sm px-3 sm:px-4 py-1 sm:py-2 shadow-sm transition-all duration-300 group-hover:scale-105'>
-                    Lets's Work                    </div>
+                    <div className='absolute top-0 left-2 sm:left-5 rounded-full w-max bg-amber-50 text-xs sm:text-sm px-3 sm:px-4 py-1 sm:py-2 shadow-sm transition-all duration-300 group-hover:scale-105'>Lets&apos;s Work</div>
                 </div>
 
                 {/* بخش مرکزی */}
