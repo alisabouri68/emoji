@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "BebasNeue";
+  display: swap;
+  src: url("../../public/fonts/NibPro-Black.woff2");
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FBC1D4;
+  --foreground: #1E1E1E;
 }
 
 @theme inline {
@@ -10,17 +16,87 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --animate-tittle-1: tittle 1.5s forwards;
+  --animate-tittle-2: emoji 2s forwards;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'BebasNeue';
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.animation-tittle {
+  transform: translateY(200px);
+  transition: all 1s ease-in-out;
+}
+.emojiend {
+  width: 1.5vw;
+  height: 3vh;
+  overflow: hidden;
+  background: black;
+  border-radius: 50%;
+}
+.animate-height-change {
+  animation: height-change 4s infinite;
+}
+.animate-rotate-change {
+  animation: rotate-change 4s infinite;
+}
+@keyframes emoji {
+  0% {
+    transform: translateX(-720px) rotate(0);
+  }
+  60% {
+    transform: translateX(200px) rotate(700deg);
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+@keyframes tittle {
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes height-change {
+  0% {
+    height: 1.75rem; /* h-7 */
+  }
+  5%{
+    height: 0rem; /* h-3 */
+  }
+  10% {
+    height: 1.75rem; /* h-7 */
+  }
+  15% {
+    height: 0rem; /* h-7 */
+  }
+  20% {
+    height: 1.75rem; /* h-7 */
+  }
+}
+@keyframes rotate-change {
+  0% {
+    transform:translateX(10px) rotate(10deg);  
+  }
+  5%{
+    transform:translateX(0) rotate(0deg); 
+  }
+  10% {
+    transform:translateX(10px) rotate(10deg);  
+  }
+  15% {
+    transform:translateX(0) rotate(0deg); 
+  }
+  20% {
+    transform:translateX(10px) rotate(10deg);  
+  }
 }
